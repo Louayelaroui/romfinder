@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/screens/RFEmailSignInScreen.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFColors.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFWidget.dart';
+
+import '../utils/RFColors.dart';
+import '../utils/RFWidget.dart';
+import 'RFEmailSignInScreen.dart';
+
 
 class RFResetPasswordScreen extends StatefulWidget {
   @override

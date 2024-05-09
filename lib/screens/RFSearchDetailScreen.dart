@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/components/RFRecentUpdateComponent.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/models/RoomFinderModel.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/screens/RFLocationScreen.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFColors.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFDataGenerator.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFWidget.dart';
-import 'package:prokit_flutter/main.dart';
+
+
+import '../components/RFRecentUpdateComponent.dart';
+import '../models/RoomFinderModel.dart';
+import '../utils/RFColors.dart';
+import '../utils/RFDataGenerator.dart';
+import '../utils/RFWidget.dart';
+import 'RFLocationScreen.dart';
 
 class RFSearchDetailScreen extends StatelessWidget {
   final TextEditingController addressController = TextEditingController();
 
   final List<RoomFinderModel> hotelListData = hotelList();
-  //final List<RoomFinderModel> recentUpdateData = recentUpdateList();
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +51,7 @@ class RFSearchDetailScreen extends StatelessWidget {
                           8.width,
                           Text('Imadol', style: boldTextStyle()),
                           8.width,
-                          Container(width: 1, height: 15, color: appStore.isDarkModeOn ? white : gray.withOpacity(0.6)),
+                          Container(width: 1, height: 15, color:   gray.withOpacity(0.6)),
                           16.width,
                         ],
                       ).paddingOnly(left: 16),

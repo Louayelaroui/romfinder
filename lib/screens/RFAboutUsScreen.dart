@@ -26,12 +26,12 @@ class RFAboutUsScreen extends StatelessWidget {
                 children: [
                   Text('About the Company', style: boldTextStyle()),
                   8.height,
-                  Text(ProKitLongText, style: secondaryTextStyle()),
+                  Text(" louay is her louay is her louay is her louay is her louay is her louay is her this is a long text  " , style: secondaryTextStyle()),
                   16.height,
                   Text('About the Members', style: boldTextStyle()),
                   8.height,
                   Text(
-                    ProKitSoLongText,
+                    " louay is her louay is her louay is her louay is her louay is her louay is her this is a long text  " ,
                     style: secondaryTextStyle(),
                   ),
                 ],

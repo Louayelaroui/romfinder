@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/components/RFHotelListComponent.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/components/RFPremiumServiceComponent.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/models/RoomFinderModel.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFColors.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFDataGenerator.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFWidget.dart';
-import 'package:prokit_flutter/main.dart';
+
+
+import '../components/RFHotelListComponent.dart';
+import '../components/RFPremiumServiceComponent.dart';
+import '../models/RoomFinderModel.dart';
+import '../utils/RFColors.dart';
+import '../utils/RFDataGenerator.dart';
+import '../utils/RFWidget.dart';
 
 class RFRecentlyViewedScreen extends StatelessWidget {
   final List<RoomFinderModel> hotelListData = hotelList();
@@ -32,7 +33,7 @@ class RFRecentlyViewedScreen extends StatelessWidget {
             ),
             Container(
               margin: EdgeInsets.all(16),
-              decoration: boxDecorationWithRoundedCorners(backgroundColor: appStore.isDarkModeOn ? scaffoldDarkColor : rf_selectedCategoryBgColor),
+              decoration: boxDecorationWithRoundedCorners(backgroundColor: rf_selectedCategoryBgColor),
               padding: EdgeInsets.all(16),
               child: RFPremiumServiceComponent(),
             ),

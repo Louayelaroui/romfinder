@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/components/RFHotelListComponent.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/models/RoomFinderModel.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFDataGenerator.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFWidget.dart';
+
+
+import '../components/RFHotelListComponent.dart';
+import '../models/RoomFinderModel.dart';
+import '../utils/RFDataGenerator.dart';
+import '../utils/RFWidget.dart';
 
 class RFViewAllHotelListScreen extends StatelessWidget {
   final List<RoomFinderModel> hotelListData = hotelList();

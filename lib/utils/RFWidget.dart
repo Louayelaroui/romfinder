@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:nb_utils/nb_utils.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../main.dart';
 import 'RFColors.dart';
@@ -51,7 +53,7 @@ InputDecoration rfInputDecoration({Widget? suffixIcon, String? hintText, Widget?
         borderSide: BorderSide(color: redColor.withOpacity(0.4)),
       ),
       filled: true,
-      fillColor: appStore.isDarkModeOn ? scaffoldDarkColor : white,
+      fillColor:  white,
       suffix: suffixIcon.validate(),
       prefixIcon: showPreFixIcon.validate() ? prefixIcon.validate() : null);
 }
@@ -215,3 +217,25 @@ extension strExt on String {
     );
   }
 }
+Widget commonCacheImageWidget(String? url, double height, {double? width, BoxFit? fit}) {
+  if (url.validate().startsWith('http')) {
+    if (isMobile) {
+      return CachedNetworkImage(
+        placeholder: placeholderWidgetFn() as Widget Function(BuildContext, String)?,
+        imageUrl: '$url',
+        height: height,
+        width: width,
+        fit: fit ?? BoxFit.cover,
+        errorWidget: (_, __, ___) {
+          return SizedBox(height: height, width: width);
+        },
+      );
+    } else {
+      return Image.network(url!, height: height, width: width, fit: fit ?? BoxFit.cover);
+    }
+  } else {
+    return Image.asset(url!, height: height, width: width, fit: fit ?? BoxFit.cover);
+  }
+}
+Widget? Function(BuildContext, String) placeholderWidgetFn() => (_, s) => placeholderWidget();
+Widget placeholderWidget() => Image.asset('images/roomFinding/rf_user.jpg', fit: BoxFit.cover);

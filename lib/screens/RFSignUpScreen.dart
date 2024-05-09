@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/components/RFCommonAppComponent.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/screens/RFEmailSignInScreen.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFColors.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFWidget.dart';
 
+import '../components/RFCommonAppComponent.dart';
+import '../utils/RFColors.dart';
 import '../utils/RFString.dart';
+import '../utils/RFWidget.dart';
+import 'RFEmailSignInScreen.dart';
 
 class RFSignUpScreen extends StatefulWidget {
   @override
@@ -61,7 +61,7 @@ class _RFSignUpScreenState extends State<RFSignUpScreen> {
                 showLableText: true,
                 suffixIcon: Container(
                   padding: EdgeInsets.all(2),
-                  decoration: boxDecorationWithRoundedCorners(boxShape: BoxShape.circle, backgroundColor: rf_rattingBgColor),
+                  decoration: boxDecorationWithRoundedCorners(boxShape: BoxShape.circle, backgroundColor:rf_rattingBgColor),
                   child: Icon(Icons.done, color: Colors.white, size: 14),
                 ),
               ),

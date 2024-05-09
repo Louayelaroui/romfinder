@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/components/RFCommonAppComponent.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/screens/RFEmailSignInScreen.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/screens/RFResetPasswordScreen.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/screens/RFSignUpScreen.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFColors.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFString.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFWidget.dart';
-import 'package:prokit_flutter/main.dart';
 
-import '../../../main/utils/AppWidget.dart';
-import '../../../main/utils/codePicker/country_code_picker.dart';
+import '../components/RFCommonAppComponent.dart';
+import '../utils/RFColors.dart';
+import '../utils/RFString.dart';
+import '../utils/RFWidget.dart';
+import '../utils/country_code_picker.dart';
+import 'RFEmailSignInScreen.dart';
+import 'RFResetPasswordScreen.dart';
+import 'RFSignUpScreen.dart';
+
 
 class RFMobileSignIn extends StatefulWidget {
   @override
@@ -35,7 +34,6 @@ class _RFMobileSignInState extends State<RFMobileSignIn> {
 
   @override
   void dispose() {
-    changeStatusColor(appStore.scaffoldBackground!);
     super.dispose();
   }
 
@@ -113,4 +111,12 @@ class _RFMobileSignInState extends State<RFMobileSignIn> {
       ),
     );
   }
+}
+BoxDecoration boxDecoration({double radius = 2, Color color = Colors.transparent, Color? bgColor, var showShadow = false}) {
+  return BoxDecoration(
+    color: bgColor ,
+    boxShadow: showShadow ? defaultBoxShadow(shadowColor: shadowColorGlobal) : [BoxShadow(color: Colors.transparent)],
+    border: Border.all(color: color),
+    borderRadius: BorderRadius.all(Radius.circular(radius)),
+  );
 }
