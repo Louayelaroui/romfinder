@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/components/RFHotelListComponent.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/models/RoomFinderModel.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFColors.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFDataGenerator.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFWidget.dart';
-import 'package:prokit_flutter/main.dart';
+
+import '../components/RFHotelListComponent.dart';
+import '../models/RoomFinderModel.dart';
+import '../utils/RFColors.dart';
+import '../utils/RFDataGenerator.dart';
+import '../utils/RFWidget.dart';
+
 
 class RFLocationScreen extends StatefulWidget {
   @override
@@ -67,7 +68,7 @@ class _RFLocationScreenState extends State<RFLocationScreen> {
                           8.width,
                           Text('Imadol', style: boldTextStyle()),
                           8.width,
-                          Container(width: 1, height: 15, color: appStore.isDarkModeOn ? white : gray.withOpacity(0.6)),
+                          Container(width: 1, height: 15, color: gray.withOpacity(0.6)),
                           16.width,
                         ],
                       ).paddingOnly(left: 16),
@@ -97,14 +98,7 @@ class _RFLocationScreenState extends State<RFLocationScreen> {
                   ),
                   child: Text(
                     data.roomCategoryName.validate(),
-                    style: boldTextStyle(
-                        color: selectedIndex == index
-                            ? appStore.isDarkModeOn
-                                ? white
-                                : black
-                            : appStore.isDarkModeOn
-                                ? white.withOpacity(0.4)
-                                : gray.withOpacity(0.6)),
+                    style: boldTextStyle(color: gray.withOpacity(0.6)),
                   ),
                 ).onTap(() {
                   selectedIndex = index;

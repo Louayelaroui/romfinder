@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/components/RFPremiumServiceComponent.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFColors.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFImages.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFWidget.dart';
-import 'package:prokit_flutter/main.dart';
-import '../../../main/utils/AppConstant.dart';
+
+import '../components/RFPremiumServiceComponent.dart';
+import '../utils/RFColors.dart';
+import '../utils/RFImages.dart';
+import '../utils/RFWidget.dart';
 
 class RFAboutUsScreen extends StatelessWidget {
   @override
@@ -41,7 +40,7 @@ class RFAboutUsScreen extends StatelessWidget {
             Container(
               margin: EdgeInsets.only(left: 24, right: 24, top: 8, bottom: 24),
               decoration: boxDecorationWithRoundedCorners(
-                backgroundColor: appStore.isDarkModeOn ? scaffoldDarkColor : rf_selectedCategoryBgColor,
+                backgroundColor: rf_selectedCategoryBgColor,
               ),
               padding: EdgeInsets.all(16),
               child: RFPremiumServiceComponent(),
@@ -52,3 +51,5 @@ class RFAboutUsScreen extends StatelessWidget {
     );
   }
 }
+
+

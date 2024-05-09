@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/components/RFCommonAppComponent.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/models/RoomFinderModel.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/screens/RFEmailSignInScreen.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFColors.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFDataGenerator.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFImages.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFWidget.dart';
-import 'package:prokit_flutter/main.dart';
+
+import '../components/RFCommonAppComponent.dart';
+import '../models/RoomFinderModel.dart';
+import '../screens/RFEmailSignInScreen.dart';
+import '../utils/RFColors.dart';
+import '../utils/RFDataGenerator.dart';
+import '../utils/RFImages.dart';
+import '../utils/RFWidget.dart';
+
 
 class RFSettingsFragment extends StatelessWidget {
   final List<RoomFinderModel> settingData = settingList();
@@ -45,7 +46,7 @@ class RFSettingsFragment extends StatelessWidget {
                       BoxShadow(spreadRadius: 0.4, blurRadius: 3, color: gray.withOpacity(0.1), offset: Offset(1, 6)),
                     ],
                   ),
-                  child: Icon(Icons.add, color: appStore.isDarkModeOn ? white : rf_primaryColor, size: 16),
+                  child: Icon(Icons.add, color:  rf_primaryColor, size: 16),
                 ),
               ),
             ],
@@ -61,7 +62,7 @@ class RFSettingsFragment extends StatelessWidget {
               children: [
                 Text('10 Applied', style: secondaryTextStyle()),
                 8.width,
-                Container(height: 10, width: 1, color: appStore.isDarkModeOn ? white : gray.withOpacity(0.4)),
+                Container(height: 10, width: 1, color:  gray.withOpacity(0.4)),
                 8.width,
                 Text('Kathmandu', style: secondaryTextStyle()),
               ],
@@ -70,7 +71,7 @@ class RFSettingsFragment extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(vertical: 16, horizontal: 24),
               decoration: boxDecorationWithRoundedCorners(
-                backgroundColor: appStore.isDarkModeOn ? scaffoldDarkColor : rf_selectedCategoryBgColor,
+                backgroundColor:  rf_selectedCategoryBgColor,
               ),
               padding: EdgeInsets.all(16),
               child: Row(

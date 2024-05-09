@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/components/RFLocationComponent.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/models/RoomFinderModel.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFDataGenerator.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFWidget.dart';
+
+
+import '../components/RFLocationComponent.dart';
+import '../models/RoomFinderModel.dart';
+import '../utils/RFDataGenerator.dart';
+import '../utils/RFWidget.dart';
 
 class RFLocationViewAllScreen extends StatelessWidget {
   final List<RoomFinderModel> locationListData = locationList();

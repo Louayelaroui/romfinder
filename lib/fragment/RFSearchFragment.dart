@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/components/RFCommonAppComponent.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/components/RFLocationComponent.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/models/RoomFinderModel.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/screens/RFSearchDetailScreen.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFColors.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFDataGenerator.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFString.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFWidget.dart';
+
+import '../components/RFCommonAppComponent.dart';
+import '../components/RFLocationComponent.dart';
+import '../models/RoomFinderModel.dart';
+import '../screens/RFSearchDetailScreen.dart';
+import '../utils/RFColors.dart';
+import '../utils/RFDataGenerator.dart';
+import '../utils/RFString.dart';
+import '../utils/RFWidget.dart';
 
 class RFSearchFragment extends StatefulWidget {
   @override

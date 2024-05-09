@@ -2,8 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../components/RFCommonAppComponent.dart';
+import '../components/RFHotelListComponent.dart';
+import '../components/RFLocationComponent.dart';
+import '../components/RFRecentUpdateComponent.dart';
 import '../models/RoomFinderModel.dart';
+import '../screens/RFLocationViewAllScreen.dart';
+import '../screens/RFRecentupdateViewAllScreen.dart';
 import '../screens/RFSearchDetailScreen.dart';
+import '../screens/RFViewAllHotelListScreen.dart';
 import '../utils/RFColors.dart';
 import '../utils/RFDataGenerator.dart';
 import '../utils/RFString.dart';
@@ -101,7 +107,7 @@ class _RFHomeFragmentState extends State<RFHomeFragment> {
                   child: Container(
                     margin: EdgeInsets.only(right: 8),
                     decoration: boxDecorationWithRoundedCorners(
-                      backgroundColor: appStore.isDarkModeOn ? scaffoldDarkColor : selectCategoryIndex == index ? rf_selectedCategoryBgColor : rf_categoryBgColor,
+                      backgroundColor:  rf_categoryBgColor,
                     ),
                     padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                     child: Text(

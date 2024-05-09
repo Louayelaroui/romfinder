@@ -2,14 +2,15 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/components/RFCommonAppComponent.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/components/RFConformationDialog.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/screens/RFHomeScreen.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/screens/RFResetPasswordScreen.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/screens/RFSignUpScreen.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFColors.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFString.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFWidget.dart';
+
+import '../components/RFCommonAppComponent.dart';
+import '../components/RFConformationDialog.dart';
+import '../utils/RFColors.dart';
+import '../utils/RFString.dart';
+import '../utils/RFWidget.dart';
+import 'RFHomeScreen.dart';
+import 'RFResetPasswordScreen.dart';
+import 'RFSignUpScreen.dart';
 
 // ignore: must_be_immutable
 class RFEmailSignInScreen extends StatefulWidget {

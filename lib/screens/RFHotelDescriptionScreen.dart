@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/components/RFCongratulatedDialog.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/components/RFHotelDetailComponent.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/models/RoomFinderModel.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFColors.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/utils/RFWidget.dart';
+
+import '../components/RFCongratulatedDialog.dart';
+import '../components/RFHotelDetailComponent.dart';
+import '../models/RoomFinderModel.dart';
+import '../utils/RFColors.dart';
+import '../utils/RFWidget.dart';
 
 class RFHotelDescriptionScreen extends StatefulWidget {
   final RoomFinderModel? hotelData;
